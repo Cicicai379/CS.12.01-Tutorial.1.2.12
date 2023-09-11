@@ -8,13 +8,12 @@ public class Successors {
 
         return null;
     }
-    public static Position[][] getSuccessorArray(int[][] intArr)
+    public static Position[][] getSuccessorArray(int[][] arr)
     {
-        Position[][] successors = new Position[intArr.length][intArr[0].length];
-
-        for(int r = 0; r < successors.length; r++)
-            for(int c = 0; c < successors[0].length; c++)
-                successors[r][c] = findPosition(intArr[r][c] + 1, intArr);
+        Position[][] successors = new Position[arr.length][arr[0].length];
+        for(int i = 0; i < successors.length; i++)
+            for(int j = 0; j < successors[0].length; j++)
+                successors[i][j] = findPosition(arr[i][j]+1, arr);
 
         return successors;
     }
